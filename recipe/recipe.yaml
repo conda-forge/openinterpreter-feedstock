@@ -14,7 +14,7 @@ source:
     - patches/0003-increase-chatgpt-recursion-limit.patch
 
 build:
-  number: 
+  number: 0
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
