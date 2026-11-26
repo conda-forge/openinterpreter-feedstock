@@ -10,7 +10,8 @@ if [[ ${OSTYPE} == "linux"* && "${build_platform:-}" != "${target_platform:-}" ]
     export OPENSSL_DIR="${PREFIX}"
 fi
 
-if [[ "${target_platform:-}" == "linux-aarch64" ]]; then
+# Keep Rust compilation and linking within the Linux CI runners' memory limits.
+if [[ "${target_platform:-}" == linux-* ]]; then
     export CARGO_BUILD_JOBS="${CARGO_BUILD_JOBS:-1}"
     export CARGO_PROFILE_RELEASE_CODEGEN_UNITS="${CARGO_PROFILE_RELEASE_CODEGEN_UNITS:-1}"
     export CARGO_PROFILE_RELEASE_DEBUG="${CARGO_PROFILE_RELEASE_DEBUG:-false}"
