@@ -1,5 +1,5 @@
 context:
-  version: "0.0.64"
+  version: "0.0.65"
 
 package:
   name: openinterpreter
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openinterpreter/openinterpreter/archive/refs/tags/rust-v${{ version }}.tar.gz
-  sha256: cceb135fe6162e1b5fb23d2d1035e552d96c4907814ca25c74ea8c361690d535
+  sha256: a29f4d45fb3e8140fbcf5babc987111bd89bcfd57f2c2d9020127835b39bd5b6
   patches:
     - patches/0001-isolate-conda-package-layout.patch
     - patches/0002-use-auditable-locked-package-builds.patch
